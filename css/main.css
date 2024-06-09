@@ -1,9 +1,16 @@
+/* COMMON */
 body{
     color: #333;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.4;
     font-family: "Nanum Gothic", sans-serif;
+}
+img{
+    display: block;
+}
+a {
+    text-decoration: none;
 }
 
 /* HEADER */
@@ -12,9 +19,63 @@ header{
 }
 header .inner{
     width: 1100px;
+    height: 120px;
     margin: 0 auto;
     background-color: orange;
+    position: relative;
 }
 header .logo{
+    height: 75px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    /* 임시로 로고 숨기기 */
+    display: none;
+}
+header .sub-menu {
+
+}
+header .sub-menu ul.menu {
+    /* Arial 폰트가 없으면 sans-serif 폰트를 사용함 */
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+header .sub-menu ul.menu li {
+    position: relative;
+}
+/* ::는 가상 요소 선택자를 의미함 */
+header .sub-menu ul.menu li::before {
+    /* content 속성이 공백으로라도 지정되지 않으면 before 가상 요소 사용 불가 */
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+/* 구분선 중 가장 처음 것은 안보이게 설정. Sign In 왼쪽은 구분이 필요 없으니 */
+header .sub-menu ul.menu li:first-child::before {
+    display: none;
+}
+header .sub-menu ul.menu li a {
+    font-size: 12px;
+    padding: 11px 16px;
+    display: block;
+    color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+    color: #000;
+}
+header .sub-menu .search {
+
+}
+header .sub-menu .search input {
+
+}
+header .sub-menu .search input .material-icons{
 
 }
