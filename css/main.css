@@ -20,6 +20,7 @@ a {
 
 /* HEADER */
 header{
+    position: relative;
     background-color: #f6f5f0;
     border-bottom: 1px solid #c8c8c8;
 }
@@ -159,8 +160,8 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li{
     cursor: pointer;
 }
 header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover{
-    color: #669900;
-    
+    text-decoration: underline;
+
 }
 header .main-menu .item .item__contents .contents__texture{
     padding: 26px 0;
@@ -174,4 +175,16 @@ header .main-menu .item .item__contents .contents__texture h4{
 header .main-menu .item .item__contents .contents__texture p{
     color: #669900;
     margin: 4px 0 14px;
+}
+
+/* Badge */ 
+header .badges {
+    position: absolute;
+    top: 132px;
+    right: 12px;
+    
+}
+header .badges .badge{
+    border-radius: 10px;
+    overflow: hidden;
 }
