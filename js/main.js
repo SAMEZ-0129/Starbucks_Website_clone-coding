@@ -21,3 +21,25 @@ searchInputEl.addEventListener('blur', function () {
     searchElment.classList.remove('focused'); //focused 클래스를 삭제
     searchInputEl.setAttribute('placeholder', '');
 });
+
+// 우측 배너가 스크롤 시 사라지도록
+const badgeEl = document.querySelector('header .badges');
+ // window 객체는 현재 보고있는 창 자체 이해하면 쉽다
+window.addEventListener('scroll', _.throttle( function(){  // lodash의 throttle 함수를 통해 300ms 주기로 함수 실행 = 브라우저 과부하 방지
+    console.log(window.scrollY);
+    if (window.scrollY > 500){
+        // 우측 배너 숨기기
+        // gsap.to(요소, 지속시간, 옵션);
+        gsap.to(badgeEl, .6 , {
+            opacity: 0,
+            display: 'none'
+        });
+    }
+    else{
+        // 우측 배너 보여주기
+        gsap.to(badgeEl, .6 , {
+            opacity: 1,
+            display: 'block'
+        });
+    }
+}, 300));

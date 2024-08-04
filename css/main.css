@@ -5,6 +5,7 @@ body{
     font-weight: 400;
     line-height: 1.4;
     font-family: "Nanum Gothic", sans-serif;
+    height: 3000px;
 }
 img{
     display: block;
@@ -20,9 +21,12 @@ a {
 
 /* HEADER */
 header{
-    position: relative;
+    /* position: relative; */
+    width: 100%;
+    position: fixed;
     background-color: #f6f5f0;
     border-bottom: 1px solid #c8c8c8;
+    top: 0;
 }
 header > .inner{
     height: 120px;
@@ -182,9 +186,12 @@ header .badges {
     position: absolute;
     top: 132px;
     right: 12px;
-    
 }
 header .badges .badge{
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.15);
+    /* 클릭이 가능한 요소 */
+    cursor: pointer;
 }
