@@ -43,3 +43,13 @@ window.addEventListener('scroll', _.throttle( function(){  // lodash의 throttle
         });
     }
 }, 300));
+
+
+// fade-in 기능
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl, index) {
+    gsap.to(fadeEl, 1, {
+        delay: (index + 1) * .7, // fade-in 클래스를 가진 각 항목을 for문 돌림(forEach의 역할), 이때 각 요소를 index 값으로 구분해서 순차적으로 실행
+        opacity: 1
+    });
+});
